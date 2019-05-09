@@ -1,4 +1,4 @@
-﻿namespace Development_Toolbox.Model
+﻿namespace CT.Entity
 {
     public class TextString
     {
