@@ -62,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FmConvertToClass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmConvertToClass.Designer.cs">
+      <DependentUpon>FmConvertToClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,22 +81,25 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="HotKey.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="FmToggleCase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="FmToggleCase.Designer.cs">
+      <DependentUpon>FmToggleCase.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FmConvertToClass.resx">
+      <DependentUpon>FmConvertToClass.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FmMain.resx">
       <DependentUpon>FmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="FmToggleCase.resx">
+      <DependentUpon>FmToggleCase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

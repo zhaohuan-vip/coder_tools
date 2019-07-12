@@ -28,21 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmMain));
+            this.btnToggleCase = new System.Windows.Forms.Button();
+            this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.SuspendLayout();
+            // 
+            // btnToggleCase
+            // 
+            this.btnToggleCase.Location = new System.Drawing.Point(12, 12);
+            this.btnToggleCase.Name = "btnToggleCase";
+            this.btnToggleCase.Size = new System.Drawing.Size(75, 23);
+            this.btnToggleCase.TabIndex = 0;
+            this.btnToggleCase.Text = "大小写转换";
+            this.btnToggleCase.UseVisualStyleBackColor = true;
+            this.btnToggleCase.Click += new System.EventHandler(this.btnToggleCase_Click);
+            // 
+            // notifyIcon
+            // 
+            this.notifyIcon.Text = "notifyIcon1";
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseClick);
             // 
             // FmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(504, 324);
+            this.Controls.Add(this.btnToggleCase);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FmMain";
             this.Text = "Coder Tools";
+            this.Activated += new System.EventHandler(this.FmMain_Activated);
+            this.SizeChanged += new System.EventHandler(this.FmMain_SizeChanged);
+            this.Leave += new System.EventHandler(this.FmMain_Leave);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnToggleCase;
+        private System.Windows.Forms.NotifyIcon notifyIcon;
     }
 }
