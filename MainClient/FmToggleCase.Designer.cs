@@ -56,6 +56,7 @@
             this.txtNewText.Location = new System.Drawing.Point(6, 178);
             this.txtNewText.Multiline = true;
             this.txtNewText.Name = "txtNewText";
+            this.txtNewText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtNewText.Size = new System.Drawing.Size(511, 158);
             this.txtNewText.TabIndex = 0;
             // 
@@ -196,6 +197,7 @@
             this.txtOldText.Location = new System.Drawing.Point(6, 3);
             this.txtOldText.Multiline = true;
             this.txtOldText.Name = "txtOldText";
+            this.txtOldText.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.txtOldText.Size = new System.Drawing.Size(511, 140);
             this.txtOldText.TabIndex = 2;
             // 
@@ -203,7 +205,7 @@
             // 
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
             // 
-            // MainForm
+            // FmToggleCase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

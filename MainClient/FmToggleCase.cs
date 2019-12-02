@@ -43,7 +43,7 @@ namespace Development_Toolbox
         }
 
         /// <summary>
-        /// Gets the operation lines strings.
+        /// 待处理字符串数组
         /// </summary>
         /// <value>The operation lines strings.</value>
         protected string[] OperationLinesStrings

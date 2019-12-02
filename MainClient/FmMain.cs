@@ -1,10 +1,12 @@
-﻿using System;
+﻿using MainClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -137,6 +139,12 @@ namespace Development_Toolbox
         {
             FmToggleCase fmToggleCase = new FmToggleCase();
             fmToggleCase.ShowDialog();
+        }
+
+        private void btnConvertToClass_Click(object sender, EventArgs e)
+        {
+            FmConvertToClass fmConvertToClass = new FmConvertToClass();
+            fmConvertToClass.ShowDialog();
         }
     }
 }

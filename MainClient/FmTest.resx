@@ -117,16 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="txtPreText.Text" xml:space="preserve">
-    <value>`id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'id',
-  `name` varchar(100) DEFAULT NULL COMMENT '名称',
-  `experience_version_number` varchar(50) DEFAULT NULL COMMENT '体验版本号',
-  `official_version_number` varchar(50) DEFAULT NULL COMMENT '正式版本号',
-  `create_user` varchar(100) DEFAULT NULL COMMENT '创建人',
-  `create_user_id` varchar(100) DEFAULT NULL COMMENT '创建人Id',
-  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
-  `update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '更新时间',
-  `update_user_id` varchar(100) DEFAULT NULL COMMENT '更新人id',
-  `update_user` varchar(100) DEFAULT NULL COMMENT '更新人',</value>
-  </data>
+  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

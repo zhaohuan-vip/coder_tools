@@ -2,6 +2,10 @@
 {
     public class TextString
     {
+        public TextString()
+        {
+
+        }
         private string _word;
 
         /// <summary>
@@ -12,24 +16,6 @@
         {
             get
             {
-                if (IsTirm)
-                {
-                    _word = _word.Trim();
-                }
-                switch (UpperOrLower)
-                {
-                    case 1:
-                        {
-                            _word = _word.ToUpper();
-                            break;
-                        }
-                    case 2:
-                        {
-                            _word = _word.ToUpper();
-                            break;
-                        }
-                    default: { break; }
-                }
                 return _word;
             }
             set { _word = value; }
@@ -45,8 +31,8 @@
         /// 设置获取大小写0:正常,1:大写,2:小写
         /// </summary>
         /// <value></value>
-        public int UpperOrLower { get; set; }
-
+        public CTEnum UpperOrLower { get; set; }
+        
     }
 
 
