@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FmConvertToClass));
             this.tbMain = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnConvert = new System.Windows.Forms.Button();
+            this.txtMessage = new System.Windows.Forms.TextBox();
             this.txtCode = new System.Windows.Forms.TextBox();
             this.txtPreText = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtMessage = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tbMain.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -67,6 +67,15 @@
             this.tabPage1.Text = "FromMySQL";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 361);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 12);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Message:";
+            // 
             // btnConvert
             // 
             this.btnConvert.Location = new System.Drawing.Point(6, 122);
@@ -77,34 +86,6 @@
             this.btnConvert.UseVisualStyleBackColor = true;
             this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
             // 
-            // txtCode
-            // 
-            this.txtCode.Location = new System.Drawing.Point(8, 151);
-            this.txtCode.Multiline = true;
-            this.txtCode.Name = "txtCode";
-            this.txtCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtCode.Size = new System.Drawing.Size(781, 207);
-            this.txtCode.TabIndex = 0;
-            // 
-            // txtPreText
-            // 
-            this.txtPreText.Location = new System.Drawing.Point(6, 6);
-            this.txtPreText.Multiline = true;
-            this.txtPreText.Name = "txtPreText";
-            this.txtPreText.Size = new System.Drawing.Size(783, 110);
-            this.txtPreText.TabIndex = 0;
-            this.txtPreText.Text = resources.GetString("txtPreText.Text");
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(583, 388);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // txtMessage
             // 
             this.txtMessage.Location = new System.Drawing.Point(8, 376);
@@ -113,15 +94,38 @@
             this.txtMessage.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtMessage.Size = new System.Drawing.Size(781, 112);
             this.txtMessage.TabIndex = 0;
+            this.txtMessage.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_KeyDown);
             // 
-            // label1
+            // txtCode
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 361);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 12);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Message:";
+            this.txtCode.Location = new System.Drawing.Point(8, 151);
+            this.txtCode.Multiline = true;
+            this.txtCode.Name = "txtCode";
+            this.txtCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtCode.Size = new System.Drawing.Size(781, 207);
+            this.txtCode.TabIndex = 0;
+            this.txtCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_KeyDown);
+            // 
+            // txtPreText
+            // 
+            this.txtPreText.Location = new System.Drawing.Point(6, 6);
+            this.txtPreText.Multiline = true;
+            this.txtPreText.Name = "txtPreText";
+            this.txtPreText.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPreText.Size = new System.Drawing.Size(783, 110);
+            this.txtPreText.TabIndex = 0;
+            this.txtPreText.Text = resources.GetString("txtPreText.Text");
+            this.txtPreText.KeyDown += new System.Windows.Forms.KeyEventHandler(this.text_KeyDown);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(797, 496);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // FmConvertToClass
             // 

@@ -144,7 +144,12 @@ namespace Development_Toolbox
         private void btnConvertToClass_Click(object sender, EventArgs e)
         {
             FmConvertToClass fmConvertToClass = new FmConvertToClass();
+            this.Hide();
             fmConvertToClass.ShowDialog();
+            this.Show();
+           
         }
+
+      
     }
 }
