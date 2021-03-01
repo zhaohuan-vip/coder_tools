@@ -23,16 +23,23 @@ namespace MainClient
             List<string> preText = txtPreText.Lines.ToList();
             List<string> newLines = new List<string>();
             List<string> messages = new List<string>();
-            //newLines.Add("/// <summary>");
-            //newLines.Add("/// ");
-            //newLines.Add("/// </summary>");
-            //newLines.Add("public enum IsValuable");
-            //newLines.Add("{");
+
+            Dictionary<string, string> sqlTypeDic = new Dictionary<string, string>()
+            {
+                { "int","Integer" },
+                { "tinyint","Integer" },
+                { "decimal","BigDecimal" },
+                { "varchar","String" },
+                { "text","String" },
+                { "datetime","Date" },
+                { "timestamp","Timestamp" },
+            };
 
             foreach (var line in preText)
             {
                 string itemString = line;
-                Regex reg = new Regex(@"`(?<name>.*)`\s(?<type>int|varchar|text|datetime|decimal|timestamp).*COMMENT\s'(?<comment>.*)'", RegexOptions.IgnoreCase);
+
+                Regex reg = new Regex($@"`(?<name>.*)`\s(?<type>{string.Join("|", sqlTypeDic.Keys)})(\(|\sDEFAULT).*COMMENT\s'(?<comment>.*)'", RegexOptions.IgnoreCase);
                 MatchCollection ms = reg.Matches(itemString);
                 if (ms.Count > 0 && ms[0].Success)
                 {
@@ -44,33 +51,7 @@ namespace MainClient
                     name = Regex.Replace(name, @"_[a-z]", match => match.Value.ToUpper().Remove(0, 1));
 
                     //转换为java类型
-                    switch (hType)
-                    {
-                        case "int":
-                            type = "Integer";
-                            break;
-                        case "tinyint":
-                            type = "Integer";
-                            break;
-                        case "decimal":
-                            type = "BigDecimal";
-                            break;
-                        case "varchar":
-                            type = "String";
-                            break;
-                        case "text":
-                            type = "String";
-                            break;
-                        case "datetime":
-                            type = "Date";
-                            break;
-                        case "timestamp":
-                            type = "Timestamp";
-                            break;
-                        default:
-                            break;
-
-                    }
+                    sqlTypeDic.TryGetValue(hType, out type);
 
                     newLines.Add("/**");
                     newLines.Add(" * " + ms[0].Groups["comment"].ToString());
@@ -83,7 +64,7 @@ namespace MainClient
                 }
 
             }
-            //newLines.Add("}");
+           
             txtCode.Lines = newLines.ToArray();
             txtMessage.Lines = messages.ToArray();
             if (!string.IsNullOrEmpty(txtCode.Text))
