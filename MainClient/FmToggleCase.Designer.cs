@@ -34,6 +34,7 @@
             this.btnToUpper = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbBuilder = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtAddString = new System.Windows.Forms.TextBox();
@@ -45,7 +46,6 @@
             this.btnToLower = new System.Windows.Forms.Button();
             this.txtOldText = new System.Windows.Forms.TextBox();
             this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.cbBuilder = new System.Windows.Forms.CheckBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -105,6 +105,16 @@
             this.tabPage1.Text = "大小写转换";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // cbBuilder
+            // 
+            this.cbBuilder.AutoSize = true;
+            this.cbBuilder.Location = new System.Drawing.Point(63, 174);
+            this.cbBuilder.Name = "cbBuilder";
+            this.cbBuilder.Size = new System.Drawing.Size(102, 16);
+            this.cbBuilder.TabIndex = 14;
+            this.cbBuilder.Text = "StringBuilder";
+            this.cbBuilder.UseVisualStyleBackColor = true;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -151,7 +161,7 @@
             // 
             this.ckbTrim.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ckbTrim.AutoSize = true;
-            this.ckbTrim.Location = new System.Drawing.Point(410, 373);
+            this.ckbTrim.Location = new System.Drawing.Point(171, 174);
             this.ckbTrim.Name = "ckbTrim";
             this.ckbTrim.Size = new System.Drawing.Size(60, 16);
             this.ckbTrim.TabIndex = 8;
@@ -206,16 +216,6 @@
             // notifyIcon
             // 
             this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-            // 
-            // cbBuilder
-            // 
-            this.cbBuilder.AutoSize = true;
-            this.cbBuilder.Location = new System.Drawing.Point(63, 174);
-            this.cbBuilder.Name = "cbBuilder";
-            this.cbBuilder.Size = new System.Drawing.Size(102, 16);
-            this.cbBuilder.TabIndex = 14;
-            this.cbBuilder.Text = "StringBuilder";
-            this.cbBuilder.UseVisualStyleBackColor = true;
             // 
             // FmToggleCase
             // 

@@ -152,12 +152,12 @@ namespace Development_Toolbox
                     formatStr = "{0}.append(\"{1}\");";
                 }
                 txtNewText.Lines =
-               txtOldText.Lines.Select(line => string.Format(formatStr, txtVariable.Text, line.Replace("\"", "\\\"").Trim())).ToArray();
+               txtOldText.Lines.Select(line => string.Format(formatStr, txtVariable.Text, IsTirm ? line.Replace("\"", "\\\"").Trim(): line.Replace("\"", "\\\""))).ToArray();
             }
             else
             {
                 txtNewText.Lines =
-               txtOldText.Lines.Select(line => string.Format("\"{0}\"", line.Replace("\"", "\\\"").Trim())).ToArray();
+               txtOldText.Lines.Select(line => string.Format("\"{0}\"", IsTirm ? line.Replace("\"", "\\\"").Trim() : line.Replace("\"", "\\\""))).ToArray();
             }
         }
     }
