@@ -137,31 +137,28 @@ namespace Development_Toolbox
         {
             IsTirm = ckbTrim.Checked;
         }
-        private void btnHtmlToc_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 生成代码
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnCreateCode_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtVariable.Text))
             {
+                string formatStr = "{0}+=\"{1}\";";
+                if (cbBuilder.Checked)
+                {
+                    formatStr = "{0}.append(\"{1}\");";
+                }
                 txtNewText.Lines =
-               txtOldText.Lines.Select(line => string.Format("{0}+=\"{1}\";", txtVariable.Text, line.Replace("\"", "\\\"").Trim())).ToArray();
+               txtOldText.Lines.Select(line => string.Format(formatStr, txtVariable.Text, line.Replace("\"", "\\\"").Trim())).ToArray();
             }
             else
             {
                 txtNewText.Lines =
                txtOldText.Lines.Select(line => string.Format("\"{0}\"", line.Replace("\"", "\\\"").Trim())).ToArray();
             }
-
         }
-        
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form1 f1 = new Form1();
-            f1.Show();
-            this.Hide();
-        }
-
-
-
-
     }
 }

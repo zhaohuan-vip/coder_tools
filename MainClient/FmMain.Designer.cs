@@ -37,7 +37,7 @@
             // 
             // btnToggleCase
             // 
-            this.btnToggleCase.Location = new System.Drawing.Point(12, 12);
+            this.btnToggleCase.Location = new System.Drawing.Point(22, 30);
             this.btnToggleCase.Name = "btnToggleCase";
             this.btnToggleCase.Size = new System.Drawing.Size(75, 33);
             this.btnToggleCase.TabIndex = 0;
@@ -56,7 +56,7 @@
             // 
             // btnConvertToClass
             // 
-            this.btnConvertToClass.Location = new System.Drawing.Point(93, 12);
+            this.btnConvertToClass.Location = new System.Drawing.Point(119, 30);
             this.btnConvertToClass.Name = "btnConvertToClass";
             this.btnConvertToClass.Size = new System.Drawing.Size(91, 33);
             this.btnConvertToClass.TabIndex = 1;
