@@ -39,7 +39,7 @@ namespace MainClient
             {
                 string itemString = line;
 
-                Regex reg = new Regex($@"`(?<name>.*)`\s(?<type>{string.Join("|", sqlTypeDic.Keys)})(\(|\sDEFAULT).*COMMENT\s'(?<comment>.*)'", RegexOptions.IgnoreCase);
+                Regex reg = new Regex($@"`(?<name>.*)`\s(?<type>{string.Join("|", sqlTypeDic.Keys)})(\(|\sDEFAULT|\sNOT|\sNULL\sDEFAULT).*COMMENT\s'(?<comment>.*)'", RegexOptions.IgnoreCase);
                 MatchCollection ms = reg.Matches(itemString);
                 if (ms.Count > 0 && ms[0].Success)
                 {
