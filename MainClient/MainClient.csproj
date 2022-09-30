@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MainClient</RootNamespace>
     <AssemblyName>MainClient</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>发布\</PublishUrl>
     <Install>true</Install>
@@ -26,6 +26,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -74,6 +75,12 @@
     <Compile Include="FmMain.Designer.cs">
       <DependentUpon>FmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FmMd5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FmMd5.Designer.cs">
+      <DependentUpon>FmMd5.cs</DependentUpon>
+    </Compile>
     <Compile Include="FmTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +107,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FmMain.resx">
       <DependentUpon>FmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FmMd5.resx">
+      <DependentUpon>FmMd5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FmTest.resx">
       <DependentUpon>FmTest.cs</DependentUpon>
@@ -152,6 +162,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="tool.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CT.Core\CT.Core.csproj">
+      <Project>{b1504ac9-2ee7-452a-b6a0-c37e13b6ff38}</Project>
+      <Name>CT.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CT.Entity\CT.Entity.csproj">
+      <Project>{d1840649-5fc6-4d9f-84c8-deb558653125}</Project>
+      <Name>CT.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -150,6 +150,12 @@ namespace Development_Toolbox
            
         }
 
-      
+        private void btnMd5_Click(object sender, EventArgs e)
+        {
+            FmMd5 fm = new FmMd5();
+            this.Hide();
+            fm.ShowDialog();
+            this.Show();
+        }
     }
 }
